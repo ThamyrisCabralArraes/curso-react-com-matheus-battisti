@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function Hooks() {
   let [novaIdade, setNovaIdade] = useState(0);
@@ -9,14 +9,16 @@ function Hooks() {
     setNovaIdade((novaIdade -= 1));
   };
 
-  useEffect(() => {
-    console.log('useEffect');
-  });
+  // useEffect(() => {
+  //   console.log('useEffect');
+  // });
   return (
     <div>
-      <p>Qual sua idade : {novaIdade}</p>
-      <button onClick={handleAumentarIdade}>Aumentar idade</button>
+      <p>
+        Qual sua nota para essas imagens: <span>{novaIdade}</span>
+      </p>
       <button onClick={handleReduzirIdade}>Reduzir Idade</button>
+      <button onClick={handleAumentarIdade}>Aumentar idade</button>
     </div>
   );
 }
